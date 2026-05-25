@@ -1,0 +1,6 @@
+INSERT INTO perfil_estudiante (usuario_id, nombre, apellido, email, telefono, carrera, sede, activo) VALUES
+                                                                                                         (1, 'Ana',     'González',  'ana.gonzalez@duoc.cl',   '912345678', 'Ingeniería Informática', 'Valparaíso', TRUE),
+                                                                                                         (2, 'Carlos',  'Ramírez',   'carlos.ramirez@duoc.cl', '923456789', 'Administración',         'Santiago',   TRUE),
+                                                                                                         (3, 'Sofía',   'Martínez',  'sofia.martinez@duoc.cl', '934567890', 'Diseño Gráfico',         'Concepción', TRUE),
+                                                                                                         (4, 'Luis',    'Herrera',   'luis.herrera@duoc.cl',   '945678901', 'Contabilidad',           'Valparaíso', FALSE),
+                                                                                                         (5, 'Camila',  'Torres',    'camila.torres@duoc.cl',  '956789012', 'Ingeniería Informática', 'Santiago',   TRUE);
