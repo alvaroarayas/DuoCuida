@@ -1,0 +1,6 @@
+INSERT INTO evaluacion (solicitud_id, gestor_id, resultado, observacion, puntaje, fecha) VALUES
+                                                                                             (1, 6, 'APROBADO',  'Estudiante cumple requisitos socioeconómicos',      85, '2026-04-10'),
+                                                                                             (2, 6, 'APROBADO',  'Situación académica requiere intervención',          78, '2026-04-11'),
+                                                                                             (3, 7, 'RECHAZADO', 'No cumple criterios de vulnerabilidad establecidos', 40, '2026-04-12'),
+                                                                                             (4, 7, 'APROBADO',  'Caso prioritario, requiere atención inmediata',      92, '2026-04-13'),
+                                                                                             (5, 6, 'PENDIENTE', 'Falta documentación de respaldo',                    NULL, '2026-04-14');
