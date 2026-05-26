@@ -26,7 +26,7 @@ DuoCuida es una plataforma de apoyo estudiantil basada en microservicios indepen
 | atenciones | 8088 | Alvaro Araya Sanchez | Registro de atenciones realizadas |
 | beneficios | 8089 | Alvaro Araya Sanchez | Gestión de beneficios asignados a estudiantes |
 | notificaciones | 8090 | Christian Vargas Castro | Envío de notificaciones a usuarios |
-| auth | 8081 | Christian Vargas Castro | Autenticación y autorización |
+| auth | 8091 | Christian Vargas Castro | Autenticación y autorización |
 
 ## Tecnologías Utilizadas
 
