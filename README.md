@@ -52,6 +52,9 @@ DuoCuida es una plataforma de apoyo estudiantil basada en microservicios indepen
 - Logs estructurados con SLF4J en controller, service y exception handler
 - Migraciones de base de datos con Flyway (V1: tablas, V2: datos iniciales)
 - Comunicación entre microservicios mediante WebClient:
+  - `auth` consulta `usuarios` para validar credenciales en login y registro
+  - `solicitudes` consulta `perfiles` para validar el estudiante al crear una solicitud
+  - `solicitudes` llama `notificaciones` para enviar notificaciones automáticas
   - `planes` consulta `evaluaciones` para validar existencia antes de crear un plan
   - `atenciones` consulta `solicitudes` para validar existencia antes de registrar una atención
 
@@ -67,28 +70,12 @@ DuoCuida es una plataforma de apoyo estudiantil basada en microservicios indepen
 ### 1. Iniciar MariaDB
 Abre XAMPP y presiona **Start** en el módulo **MySQL**.
 
-### 2. Crear las bases de datos
-En phpMyAdmin (`http://localhost/phpmyadmin`), crea las siguientes bases de datos:
-
-```sql
-CREATE DATABASE duocuida_usuarios_db;
-CREATE DATABASE duocuida_auth_db;
-CREATE DATABASE duocuida_perfiles_db;
-CREATE DATABASE duocuida_solicitudes_db;
-CREATE DATABASE duocuida_evaluaciones_db;
-CREATE DATABASE duocuida_planes_db;
-CREATE DATABASE duocuida_derivaciones_db;
-CREATE DATABASE duocuida_atenciones_db;
-CREATE DATABASE duocuida_beneficios_db;
-CREATE DATABASE duocuida_notificaciones_db;
-```
-
-### 3. Ejecutar cada microservicio
-Abre cada proyecto en IntelliJ IDEA y ejecuta la clase principal (*Application.java). Flyway creará las tablas e insertará los datos automáticamente.
+### 2. Ejecutar cada microservicio
+Abre cada proyecto en IntelliJ IDEA y ejecuta la clase principal (*Application.java). Flyway creará automáticamente la base de datos, las tablas e insertará los datos iniciales.
 
 por ejemplo: EvaluacionApplication
 
-### 4. Verificar endpoints
+### 3. Verificar endpoints
 Usar Postman para probar los endpoints:
 ```
 GET http://localhost:8085/api/evaluaciones
@@ -106,7 +93,7 @@ src/main/java/com/duocuida/{servicio}/
 ├── model/            # Entidades JPA
 ├── dto/              # Objetos de transferencia de datos
 ├── exception/        # Manejo centralizado de errores
-└── client/           # WebClient (solo en planes y atenciones)
+└── client/           # WebClient (auth, solicitudes, planes, atenciones)
 
 src/main/resources/
 ├── application.properties
