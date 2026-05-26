@@ -50,7 +50,7 @@ public class AuthService
             throw new ReglaNegocioException("No se puede registrar credencial para un usuario inactivo");
         }
 
-        if (!usuario.getCorreo().equalsIgnoreCase(dto.getCorreo())) {
+        if (!usuario.getEmail().equalsIgnoreCase(dto.getCorreo())) {
             throw new ReglaNegocioException("El correo no coincide con el usuario registrado");
         }
 
@@ -97,7 +97,7 @@ public class AuthService
         return new LoginResponseDTO(
                 "Login correcto",
                 usuario.getId(),
-                usuario.getCorreo(),
+                usuario.getEmail(),
                 rol
         );
     }

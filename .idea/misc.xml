@@ -11,6 +11,9 @@
         <option value="$PROJECT_DIR$/beneficios/pom.xml" />
         <option value="$PROJECT_DIR$/derivaciones/pom.xml" />
         <option value="$PROJECT_DIR$/evaluaciones/pom.xml" />
+        <option value="$PROJECT_DIR$/auth/pom.xml" />
+        <option value="$PROJECT_DIR$/notificaciones/pom.xml" />
+        <option value="$PROJECT_DIR$/solicitudes/pom.xml" />
       </list>
     </option>
   </component>

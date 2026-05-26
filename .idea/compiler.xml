@@ -14,16 +14,30 @@
         <module name="beneficios" />
         <module name="evaluaciones" />
       </profile>
+      <profile name="Annotation profile for solicitudes" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="auth" />
+        <module name="solicitudes" />
+        <module name="notificaciones" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="atenciones" options="-parameters" />
+      <module name="auth" options="-parameters" />
       <module name="beneficios" options="-parameters" />
       <module name="derivaciones" options="-parameters" />
       <module name="evaluaciones" options="-parameters" />
+      <module name="notificaciones" options="-parameters" />
       <module name="perfiles" options="-parameters" />
       <module name="planes" options="-parameters" />
+      <module name="solicitudes" options="-parameters" />
       <module name="usuarios" options="-parameters" />
     </option>
   </component>

@@ -17,8 +17,7 @@ DuoCuida es una plataforma de apoyo estudiantil basada en microservicios indepen
 
 | Microservicio | Puerto | Responsable | Descripción |
 |---------------|--------|-------------|-------------|
-| usuarios | 8081 | Christian Vargas Castro | Gestión de usuarios del sistema (ESTUDIANTE, GESTOR, ADMIN) |
-| auth | 8082 | Christian Vargas Castro | Autenticación y autorización |
+| usuarios | 8082 | Christian Vargas Castro | Gestión de usuarios del sistema (ESTUDIANTE, GESTOR, ADMIN) |
 | perfiles | 8083 | Christian Vargas Castro | Perfiles de estudiantes |
 | solicitudes | 8084 | Christian Vargas Castro | Solicitudes de apoyo estudiantil |
 | evaluaciones | 8085 | Alvaro Araya Sanchez | Evaluación de solicitudes con resultado y puntaje |
@@ -27,6 +26,7 @@ DuoCuida es una plataforma de apoyo estudiantil basada en microservicios indepen
 | atenciones | 8088 | Alvaro Araya Sanchez | Registro de atenciones realizadas |
 | beneficios | 8089 | Alvaro Araya Sanchez | Gestión de beneficios asignados a estudiantes |
 | notificaciones | 8090 | Christian Vargas Castro | Envío de notificaciones a usuarios |
+| auth | 8091 | Christian Vargas Castro | Autenticación y autorización |
 
 ## Tecnologías Utilizadas
 

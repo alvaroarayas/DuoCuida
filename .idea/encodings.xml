@@ -2,11 +2,14 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/atenciones/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/beneficios/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/derivaciones/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/evaluaciones/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notificaciones/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/perfiles/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/planes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/solicitudes/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/usuarios/src/main/java" charset="UTF-8" />
   </component>
 </project>
