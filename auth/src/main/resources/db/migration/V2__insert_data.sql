@@ -5,11 +5,11 @@
 -- auth/src/main/resources/db/migration/V2__insert_data.sql
 
 INSERT INTO credencial (id, usuario_id, correo, password, activo, fecha_creacion) VALUES
-(1, 1, 'camila.rojas@duocuida.cl', '123456', TRUE, NOW()),
-(2, 2, 'patricia.morales@duocuida.cl', '123456', TRUE, NOW()),
-(3, 3, 'admin@duocuida.cl', 'admin123', TRUE, NOW())
-ON DUPLICATE KEY UPDATE
-usuario_id = VALUES(usuario_id),
-correo = VALUES(correo),
-password = VALUES(password),
-activo = VALUES(activo);
+    (1, 1, 'ana.gonzalez@duoc.cl', '123456', TRUE, NOW()),
+    (2, 2, 'carlos.ramirez@duoc.cl', '123456', TRUE, NOW()),
+    (3, 3, 'sofia.martinez@duoc.cl', '123456', TRUE, NOW())
+    ON DUPLICATE KEY UPDATE
+                         usuario_id = VALUES(usuario_id),
+                         correo = VALUES(correo),
+                         password = VALUES(password),
+                         activo = VALUES(activo);
