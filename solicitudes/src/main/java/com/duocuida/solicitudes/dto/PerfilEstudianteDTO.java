@@ -2,18 +2,19 @@ package com.duocuida.solicitudes.dto;
 
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
-public class PerfilEstudianteDTO
-{
+public class PerfilEstudianteDTO {
 
     private Long id;
     private Long usuarioId;
-    private String run;
-    private String nombres;
-    private String apellidos;
+    private String nombre;
+    private String apellido;
+    private String email;
+    private String telefono;
     private String carrera;
-    private String jornada;
-    private Integer anioIngreso;
-    private String situacionCuidado;
-    private Boolean tieneResponsabilidadCuidado;
+    private String sede;
+    private Boolean activo;
+    private LocalDateTime createdAt;
 }

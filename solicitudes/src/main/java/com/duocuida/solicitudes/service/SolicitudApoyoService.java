@@ -77,6 +77,10 @@ public class SolicitudApoyoService {
             throw new ReglaNegocioException("No se puede crear la solicitud porque el perfil estudiante no existe");
         }
 
+        if (perfil.getActivo() != null && !perfil.getActivo()) {
+            throw new ReglaNegocioException("No se puede crear la solicitud porque el perfil estudiante está inactivo");
+        }
+
         TipoSolicitud tipoSolicitud = tipoSolicitudRepository.findById(dto.getTipoSolicitudId())
                 .orElseThrow(() -> new RecursoNoEncontradoException(
                         "No existe tipo de solicitud con ID: " + dto.getTipoSolicitudId()
@@ -126,6 +130,10 @@ public class SolicitudApoyoService {
 
         if (perfil == null || perfil.getId() == null) {
             throw new ReglaNegocioException("No se puede actualizar la solicitud porque el perfil estudiante no existe");
+        }
+
+        if (perfil.getActivo() != null && !perfil.getActivo()) {
+            throw new ReglaNegocioException("No se puede actualizar la solicitud porque el perfil estudiante está inactivo");
         }
 
         TipoSolicitud tipoSolicitud = tipoSolicitudRepository.findById(dto.getTipoSolicitudId())
@@ -226,10 +234,7 @@ public class SolicitudApoyoService {
 
         historialRepository.save(historial);
 
-        logger.info(
-                "Historial registrado para solicitud ID {}",
-                solicitud.getId()
-        );
+        logger.info("Historial registrado para solicitud ID {}", solicitud.getId());
     }
 
     private void crearNotificacionSolicitudRegistrada(
@@ -249,10 +254,7 @@ public class SolicitudApoyoService {
             logger.info("Notificación creada para usuario ID {}", perfil.getUsuarioId());
 
         } catch (Exception ex) {
-            logger.error(
-                    "No se pudo crear la notificación de solicitud registrada: {}",
-                    ex.getMessage()
-            );
+            logger.error("No se pudo crear la notificación de solicitud registrada: {}", ex.getMessage());
         }
     }
 
@@ -271,16 +273,10 @@ public class SolicitudApoyoService {
 
             notificacionClient.crearNotificacion(notificacion);
 
-            logger.info(
-                    "Notificación de cambio de estado creada para usuario ID {}",
-                    perfil.getUsuarioId()
-            );
+            logger.info("Notificación de cambio de estado creada para usuario ID {}", perfil.getUsuarioId());
 
         } catch (Exception ex) {
-            logger.error(
-                    "No se pudo crear la notificación de cambio de estado: {}",
-                    ex.getMessage()
-            );
+            logger.error("No se pudo crear la notificación de cambio de estado: {}", ex.getMessage());
         }
     }
 

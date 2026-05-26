@@ -88,11 +88,7 @@ public class AuthService
             throw new ReglaNegocioException("El usuario está inactivo");
         }
 
-        String rol = "SIN_ROL";
-
-        if (usuario.getRol() != null) {
-            rol = usuario.getRol().getNombre();
-        }
+        String rol = usuario.getRol() != null ? usuario.getRol() : "SIN_ROL";
 
         return new LoginResponseDTO(
                 "Login correcto",

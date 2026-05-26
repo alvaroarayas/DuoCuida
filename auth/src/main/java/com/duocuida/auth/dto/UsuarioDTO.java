@@ -3,14 +3,13 @@ package com.duocuida.auth.dto;
 import lombok.Data;
 
 @Data
-public class UsuarioDTO
-{
+public class UsuarioDTO {
 
     private Long id;
-    private String nombres;
+    private String nombre;
     private String apellido;
     private String email;
-    private RolDTO rol;
+    private String password;
+    private String rol;
     private Boolean activo;
-
 }
