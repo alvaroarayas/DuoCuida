@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="atenciones" target="21" />
+      <module name="auth" target="21" />
+      <module name="beneficios" target="21" />
+      <module name="derivaciones" target="21" />
+      <module name="evaluaciones" target="21" />
+      <module name="notificaciones" target="21" />
+      <module name="perfiles" target="21" />
+      <module name="planes" target="21" />
+      <module name="solicitudes" target="21" />
+      <module name="usuarios" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
