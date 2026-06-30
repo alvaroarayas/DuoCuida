@@ -8,49 +8,47 @@ spring:
     web-application-type: reactive
   cloud:
     gateway:
-      server:
-        webflux:
-          routes:
-            - id: usuarios
-              uri: http://localhost:8082
-              predicates:
-                - Path=/api/usuarios/**
-            - id: perfiles
-              uri: http://localhost:8083
-              predicates:
-                - Path=/api/perfiles/**
-            - id: solicitudes
-              uri: http://localhost:8084
-              predicates:
-                - Path=/api/solicitudes/**
-            - id: evaluaciones
-              uri: http://localhost:8085
-              predicates:
-                - Path=/api/evaluaciones/**
-            - id: planes
-              uri: http://localhost:8086
-              predicates:
-                - Path=/api/planes/**
-            - id: derivaciones
-              uri: http://localhost:8087
-              predicates:
-                - Path=/api/derivaciones/**
-            - id: atenciones
-              uri: http://localhost:8088
-              predicates:
-                - Path=/api/atenciones/**
-            - id: beneficios
-              uri: http://localhost:8089
-              predicates:
-                - Path=/api/beneficios/**
-            - id: notificaciones
-              uri: http://localhost:8090
-              predicates:
-                - Path=/api/notificaciones/**
-            - id: auth
-              uri: http://localhost:8091
-              predicates:
-                - Path=/api/auth/**
+      routes:
+        - id: usuarios
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/usuarios,/api/usuarios/**
+        - id: perfiles
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/perfiles,/api/perfiles/**
+        - id: solicitudes
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/solicitudes,/api/solicitudes/**
+        - id: evaluaciones
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/evaluaciones,/api/evaluaciones/**
+        - id: planes
+          uri: http://localhost:8086
+          predicates:
+            - Path=/api/planes,/api/planes/**
+        - id: derivaciones
+          uri: http://localhost:8087
+          predicates:
+            - Path=/api/derivaciones,/api/derivaciones/**
+        - id: atenciones
+          uri: http://localhost:8088
+          predicates:
+            - Path=/api/atenciones,/api/atenciones/**
+        - id: beneficios
+          uri: http://localhost:8089
+          predicates:
+            - Path=/api/beneficios,/api/beneficios/**
+        - id: notificaciones
+          uri: http://localhost:8090
+          predicates:
+            - Path=/api/notificaciones,/api/notificaciones/**
+        - id: auth
+          uri: http://localhost:8091
+          predicates:
+            - Path=/api/auth,/api/auth/**
 
 management:
   endpoints:
