@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: atenciones
+  datasource:
+    url: jdbc:mariadb://localhost:3306/duocuida_atenciones_db?createDatabaseIfNotExist=true
+    username: root
+    password: ""
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8088
+
+solicitudes:
+  service:
+    url: http://localhost:8084

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: planes
+  datasource:
+    url: jdbc:mariadb://localhost:3306/duocuida_planes_db?createDatabaseIfNotExist=true
+    username: root
+    password: ""
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: 8086
+
+evaluaciones:
+  service:
+    url: http://localhost:8085
